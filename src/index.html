@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Comment Section</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    <div class="comments-section">
+        <div class="max-wrapper column">
+            <div class="comment-list" data-js-comment-list>
+            </div>
+            <!-- .comment-list ends -->
+
+            <form 
+                class="comment-user" 
+                data-js-username=""
+                data-js-comment-form
+                >
+                <div class="input-control">
+                    <textarea 
+                        class="message" 
+                        placeholder="Add a comment..."
+                        required
+                        data-js-textarea
+                    ></textarea>
+                </div>
+
+                <div class="actions">
+                    <div class="imagebox">
+                        <img 
+                            src="./images/avatars/image-amyrobson.png" 
+                            alt="" class="image"
+                            data-js-current-user-image
+                        >
+                    </div>
+
+                    <button class="send-btn">send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- .comments-section ends -->
+
+    <template data-js-comment-template>
+        <div class="comment">
+            <section class="comment-box">
+                <div class="profile">
+                    <div class="avatar">
+                        <img 
+                            src="" 
+                            alt="" 
+                            class="image"
+                            data-js-user-image
+                        >
+                    </div>
+
+                    <h3 class="name" data-js-name></h3>
+
+                    <span class="time" data-js-time></span>
+                </div>
+
+                <p class="comment" data-js-comment></p>
+
+                <div class="number-spinner">
+                    <button class="upvote-btn"><i class="icon fa-solid fa-plus"></i></button>
+                    <span class="number" data-js-number></span>
+                    <button class="downvote-btn"><i class="icon fa-solid fa-minus"></i></button>
+                </div>
+
+                <div class="actions">
+                    <button class="reply-btn"><i class="icon fa-solid fa-reply"></i> Reply</button>
+                </div>
+            </section>
+            <!-- .commentbox ends -->
+
+            <div class="comment-reply" data-js-reply-list>
+            </div>
+            <!-- .comment-reply ends -->
+        </div>
+        <!-- .comment ends -->
+
+        <section class="comment-box">
+            <div class="profile">
+                <div class="avatar">
+                    <img 
+                        src="" 
+                        alt="" 
+                        class="image"
+                        data-js-user-image
+                    >
+                </div>
+
+                <h3 class="name" data-js-name></h3>
+
+                <span class="time" data-js-time></span>
+            </div>
+
+            <p class="comment" data-js-comment></p>
+
+            <div class="number-spinner">
+                <button class="upvote-btn"><i class="icon fa-solid fa-plus"></i></button>
+                <span class="number" data-js-number></span>
+                <button class="downvote-btn"><i class="icon fa-solid fa-minus"></i></button>
+            </div>
+
+            <div class="actions">
+                <button class="reply-btn"><i class="icon fa-solid fa-reply"></i> Reply</button>
+            </div>
+        </section>
+    </template>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script src="js/behaviors/comment-box.js"></script>
+</body>
+</html>
