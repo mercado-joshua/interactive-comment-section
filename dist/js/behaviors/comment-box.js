@@ -75,7 +75,7 @@ var commentBox = function commentBox() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return fetch('../../data/data.json');
+              return fetch('../../../data/data.json');
 
             case 2:
               response = _context.sent;
